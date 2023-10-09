@@ -1,7 +1,7 @@
 {
   "name": "sb-core-components",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "typings": "dist/index.d.ts",
   "license": "MIT",
