@@ -12,16 +12,17 @@ export interface IBox {
   style?: React.CSSProperties;
 }
 
-export const Box: React.FC<IBox> = ({ children, style, ...rest }) => {
-  const {
-    width,
-    padding,
-    margin,
-    border,
-    height,
-    addShadow,
-    ...restProps
-  } = rest;
+export const Box: React.FC<IBox> = ({
+  children,
+  style,
+  width,
+  padding,
+  margin,
+  border,
+  height,
+  addShadow,
+  ...restProps
+}) => {
   return (
     <div
       style={{

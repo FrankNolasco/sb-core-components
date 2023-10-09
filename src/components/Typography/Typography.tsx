@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 export type T_Typography =
   | "h1"
   | "h2"
@@ -59,18 +57,11 @@ export const Typography: React.FC<ITypography> = ({
   center,
   ...rest
 }) => {
-  const [size, setSize] = useState("14px");
-
-  useEffect(() => {
-    setSize(calcularFontSize(variant));
-    return () => {};
-  }, [variant]);
-
   return (
     <span
       style={{
         fontWeight: fw ?? "normal",
-        fontSize: size,
+        fontSize: calcularFontSize(variant),
         color: color ?? "inherit",
         textAlign: center ? "center" : "inherit",
         margin: 0,
