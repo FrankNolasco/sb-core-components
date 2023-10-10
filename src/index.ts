@@ -5,6 +5,7 @@ export { Grid, GridChild } from "./components/skeleton/Grid";
 export { Button } from "./components/atoms/Button";
 export { InputText } from "./components/atoms/InputText";
 export { RadioGroup, Radio } from "./components/atoms/Radio";
+export { Dropdown } from "./components/atoms/Dropdown";
 export {
   Typography,
   H1,
@@ -17,5 +18,3 @@ export {
   P,
   Span,
 } from "./components/atoms/Typography";
-export { ThemeProvider } from "./HOC/ThemeProvider";
-export { useTheme } from "./hook/useTheme";

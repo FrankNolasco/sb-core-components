@@ -2,9 +2,13 @@ import { ITypography } from "components/types";
 import { TypographyStyled } from "./styled";
 import { theme } from "Theme";
 
-export const Typography: React.FC<ITypography> = ({ children, ...rest }) => {
+export const Typography: React.FC<ITypography> = ({
+  children,
+  myTheme = theme,
+  ...rest
+}) => {
   return (
-    <TypographyStyled myTheme={theme} {...rest}>
+    <TypographyStyled myTheme={myTheme} {...rest}>
       {children}
     </TypographyStyled>
   );
