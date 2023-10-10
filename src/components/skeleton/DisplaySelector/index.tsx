@@ -1,13 +1,7 @@
 import React from "react";
-import { Grid } from "../Grid/Grid";
-import { Column, Flex, Row } from "../Flex/Flex";
-
-export interface IDispSelect {
-  type: "grid" | "flex" | "column" | "row" | "row-wrap" | undefined;
-  gap?: string;
-  cols?: number;
-  children?: React.ReactNode;
-}
+import { Grid } from "../Grid";
+import { Column, Flex, Row } from "../Flex";
+import { IDispSelect } from "components/types";
 
 export const DisplaySelector: React.FC<IDispSelect> = ({
   type,

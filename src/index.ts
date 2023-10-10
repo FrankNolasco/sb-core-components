@@ -1,7 +1,7 @@
-export { Box } from "./components/Box/Box";
-export { DisplaySelector } from "./components/DisplaySelector/DisplaySelector";
-export { Flex, Row, Column } from "./components/Flex/Flex";
-export { Grid, GridChild } from "./components/Grid/Grid";
+export { Box } from "./components/skeleton/Box";
+export { DisplaySelector } from "./components/skeleton/DisplaySelector";
+export { Flex, Row, Column } from "./components/skeleton/Flex";
+export { Grid, GridChild } from "./components/skeleton/Grid";
 export {
   Typography,
   H1,
@@ -13,4 +13,4 @@ export {
   Label,
   P,
   Span,
-} from "./components/Typography/Typography";
+} from "./components/atoms/Typography";

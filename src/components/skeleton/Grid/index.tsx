@@ -1,16 +1,6 @@
 import React from "react";
-import { Box, IBox } from "../Box/Box";
-
-export interface IGrid extends IBox {
-  cols?: number;
-  gap?: string | number;
-}
-
-export interface IGridChild extends IBox {
-  span?: number;
-  spanRow?: number;
-  spanCol?: number;
-}
+import { Box } from "../Box";
+import { IGrid, IGridChild } from "components/types";
 
 export const Grid: React.FC<IGrid> = ({ children, style, ...props }) => {
   const { cols, gap, ...rest } = props;

@@ -1,15 +1,5 @@
+import { IFlex } from "components/types";
 import React from "react";
-import { IBox } from "../Box/Box";
-
-export interface IFlex extends IBox {
-  justify?: string;
-  items?: string;
-  self?: string;
-  content?: string;
-  direction?: "row" | "row-reverse" | "column" | "column-reverse";
-  wrap?: "nowrap" | "wrap" | "wrap-reverse";
-  gap?: string | number;
-}
 
 export const Flex: React.FC<IFlex> = ({ children, style, ...props }) => {
   const {
