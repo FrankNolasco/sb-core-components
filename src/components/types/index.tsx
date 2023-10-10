@@ -1,4 +1,5 @@
 import React from "react";
+import { DefaultTheme } from "styled-components";
 
 export interface IBox {
   width?: string | number;
@@ -72,4 +73,5 @@ export interface ITypography {
   center?: boolean;
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  myTheme?: DefaultTheme;
 }

@@ -1,3 +1,5 @@
+import { DefaultTheme } from "styled-components";
+
 const primary = "#15A7FF";
 const defaultColor = "#c3c3c3";
 const rgbPrimary = "21,167,255";
@@ -13,7 +15,8 @@ const rgbSuccess = "36,171,0";
 
 const dark = "#000000";
 const rgbDark = "0,0,0";
-export const theme = {
+
+export const theme: DefaultTheme = {
   colors: {
     primary,
     primaryHover: "#32B2FF",
