@@ -1,5 +1,4 @@
 import React from "react";
-import { DefaultTheme } from "styled-components";
 
 export interface IBox {
   width?: string | number;
@@ -53,7 +52,6 @@ export interface IButton {
     | "warn"
     | "success"
     | "dark";
-  myTheme?: DefaultTheme;
 }
 
 export type T_Typography =
@@ -74,5 +72,4 @@ export interface ITypography {
   center?: boolean;
   children?: React.ReactNode;
   style?: React.CSSProperties;
-  myTheme?: DefaultTheme;
 }

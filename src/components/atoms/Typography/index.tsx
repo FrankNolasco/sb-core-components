@@ -1,16 +1,32 @@
-import { ITypography } from "components/types";
-import { TypographyStyled } from "./styled";
 import { theme } from "Theme";
+import { ITypography } from "components/types";
 
 export const Typography: React.FC<ITypography> = ({
   children,
-  myTheme = theme,
+  style,
+  color = "inherit",
+  variant = "span",
+  size = "md",
+  fw = "normal",
+  center,
   ...rest
 }) => {
   return (
-    <TypographyStyled myTheme={myTheme} {...rest}>
+    <span
+      style={{
+        color,
+        fontWeight: fw,
+        fontSize: theme.fonts.sizes[variant][size],
+        textAlign: center ? "center" : "inherit",
+        fontFamily: theme.fonts.fontFamily,
+        margin: 0,
+        padding: 0,
+        ...style,
+      }}
+      {...rest}
+    >
       {children}
-    </TypographyStyled>
+    </span>
   );
 };
 
