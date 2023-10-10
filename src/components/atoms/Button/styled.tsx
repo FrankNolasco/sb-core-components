@@ -6,7 +6,9 @@ export const ButtonStyled: React.FC<IButton> = styled.button<IButton>`
   padding: 0.5em 1em;
   cursor: pointer;
   transition: all 0.2s;
-  ${({ theme, type }) => `
+  ${({ theme, type }) =>
+    theme &&
+    `
     background-color: ${theme.buttons[type].backgroundColor};
     color: ${theme.buttons[type].text};
     border: ${theme.buttons[type].border.default};
