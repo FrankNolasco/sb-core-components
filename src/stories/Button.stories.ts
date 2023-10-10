@@ -18,20 +18,23 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        type: "default",
+        variant: "default",
         icon: [
           React.createElement('span', {children: '🚀'}),
         ],
         children: [
             React.createElement(Typography, {children: 'Hola'}),
         ],
+        onClick: () => {
+          alert("aaaaaaaa")
+        }
     },
   };
   
   
 export const Primary: Story = {
   args: {
-      type: "primary",
+    variant: "primary",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -43,7 +46,7 @@ export const Primary: Story = {
 
 export const Link: Story = {
   args: {
-      type: "link",
+    variant: "link",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -55,7 +58,7 @@ export const Link: Story = {
 
 export const Ghost: Story = {
   args: {
-      type: "ghost",
+    variant: "ghost",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -68,7 +71,7 @@ export const Ghost: Story = {
 
 export const Danger: Story = {
   args: {
-      type: "danger",
+    variant: "danger",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -80,7 +83,7 @@ export const Danger: Story = {
 
 export const Warn: Story = {
   args: {
-      type: "warn",
+    variant: "warn",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -93,7 +96,7 @@ export const Warn: Story = {
 
 export const Success: Story = {
   args: {
-      type: "success",
+    variant: "success",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],
@@ -105,7 +108,7 @@ export const Success: Story = {
 
 export const Dark: Story = {
   args: {
-      type: "dark",
+    variant: "dark",
       icon: [
         React.createElement('span', {children: '🚀'}),
       ],

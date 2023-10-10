@@ -40,10 +40,9 @@ export interface IGridChild extends IBox {
   spanCol?: number;
 }
 
-export interface IButton {
-  children?: React.ReactNode;
+export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode | string;
-  type:
+  variant:
     | "default"
     | "primary"
     | "link"
@@ -64,12 +63,17 @@ export type T_Typography =
   | "span"
   | "label"
   | "p";
-export interface ITypography {
+export interface ITypography extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: T_Typography;
   size?: "sm" | "lg" | "md";
   fw?: string;
   color?: string;
   center?: boolean;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
+}
+
+export interface ILabel extends React.LabelHTMLAttributes<HTMLLabelElement> {
+  size?: "sm" | "lg" | "md";
+  fw?: string;
+  color?: string;
+  center?: boolean;
 }

@@ -1,9 +1,31 @@
-import { Radio as RadioComponent, RadioGroupProps, RadioProps } from "antd";
+import { Row } from "components/skeleton/Flex";
+import { Label } from "../Typography";
 
-export const RadioGroup = ({ children, ...props }: RadioGroupProps) => {
-  return <RadioComponent.Group {...props}>{children}</RadioComponent.Group>;
-};
+export interface IRadio {
+  name: string;
+  options: { id?: string; value: string | number; name: string }[];
+  defaultValue?: string;
+}
 
-export const Radio = (props: RadioProps) => {
-  return <RadioComponent {...props} />;
+export const Radio: React.FC<IRadio> = ({ options, defaultValue }) => {
+  return (
+    <Row gap="5px">
+      {options.map((el) => {
+        return (
+          <Row items="center" self="flex-start">
+            <input
+              type="radio"
+              id={el.id}
+              defaultChecked={defaultValue === el.name}
+              defaultValue={defaultValue}
+              name="genero"
+              value={el.value}
+            />
+            <Label htmlFor={el.id}>{el.name}</Label>
+          </Row>
+        );
+      })}
+      <br />
+    </Row>
+  );
 };

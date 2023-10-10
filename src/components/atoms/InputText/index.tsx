@@ -1,4 +1,10 @@
-import { Input, InputProps } from "antd";
-export const InputText = (props: InputProps) => {
-  return <Input {...props} />;
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+
+export const InputText = (
+  props: DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >
+) => {
+  return <input {...props} />;
 };

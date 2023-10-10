@@ -20,6 +20,9 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultInput: Story = {
     args: {
+      value: "Hola mundo",
+      onChange: (e) => {alert(e.target.value)},
+      defaultValue:"askdapskdpo"
     },
   };
   

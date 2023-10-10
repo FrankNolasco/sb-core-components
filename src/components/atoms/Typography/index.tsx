@@ -1,5 +1,5 @@
 import { theme } from "Theme";
-import { ITypography } from "components/types";
+import { ILabel, ITypography } from "components/types";
 
 export const Typography: React.FC<ITypography> = ({
   children,
@@ -120,15 +120,31 @@ export const Span: React.FC<ITypography> = ({
   );
 };
 
-export const Label: React.FC<ITypography> = ({
+export const Label: React.FC<ILabel> = ({
   children,
-  variant = "label",
+  style,
+  color = "inherit",
+  size = "md",
+  fw = "normal",
+  center,
   ...rest
 }) => {
   return (
-    <Typography variant={variant} {...rest}>
+    <label
+      style={{
+        color,
+        fontWeight: fw,
+        fontSize: theme.fonts.sizes["label"][size],
+        textAlign: center ? "center" : "inherit",
+        fontFamily: theme.fonts.fontFamily,
+        margin: 0,
+        padding: 0,
+        ...style,
+      }}
+      {...rest}
+    >
       {children}
-    </Typography>
+    </label>
   );
 };
 
