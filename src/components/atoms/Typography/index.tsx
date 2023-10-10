@@ -1,10 +1,9 @@
 import { ITypography } from "components/types";
 import { TypographyStyled } from "./styled";
-import { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import { useTheme } from "hook/useTheme";
 
 export const Typography: React.FC<ITypography> = ({ children, ...rest }) => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useTheme();
   return (
     <TypographyStyled myTheme={theme} {...rest}>
       {children}

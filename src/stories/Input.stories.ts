@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import InputText from 'components/atoms/InputText';
+import {InputText} from 'components/atoms/InputText';
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

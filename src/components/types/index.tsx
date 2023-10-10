@@ -53,6 +53,7 @@ export interface IButton {
     | "warn"
     | "success"
     | "dark";
+  myTheme?: DefaultTheme;
 }
 
 export type T_Typography =

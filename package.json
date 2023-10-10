@@ -1,6 +1,6 @@
 {
   "name": "sb-core-components",
-  "version": "0.1.5",
+  "version": "0.1.4",
   "type": "module",
   "typings": "dist/index.d.ts",
   "license": "MIT",
@@ -72,8 +72,6 @@
   },
   "peerDependencies": {
     "react": ">=16",
-    "styled-components": ">=6.0.8",
-    "antd": ">=5.9.4",
-    "react-dropdown-select": ">=4.10.0"
+    "styled-components": ">=6.0.8"
   }
 }

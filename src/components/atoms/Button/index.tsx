@@ -2,9 +2,12 @@ import { Row } from "components/skeleton/Flex";
 import { IButton } from "components/types";
 import React from "react";
 import { ButtonStyled } from "./styled";
-const Button: React.FC<IButton> = ({ icon, children, type }) => {
+import { useTheme } from "hook/useTheme";
+export const Button: React.FC<IButton> = ({ icon, children, type }) => {
+  const { theme } = useTheme();
+
   return (
-    <ButtonStyled type={type}>
+    <ButtonStyled myTheme={theme} type={type}>
       <Row gap={icon ? "5px" : 0}>
         {typeof icon === "string" ? <i className={icon} /> : icon}
         {children}
@@ -12,5 +15,3 @@ const Button: React.FC<IButton> = ({ icon, children, type }) => {
     </ButtonStyled>
   );
 };
-
-export default Button;

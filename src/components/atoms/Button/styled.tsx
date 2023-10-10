@@ -6,15 +6,15 @@ export const ButtonStyled: React.FC<IButton> = styled.button<IButton>`
   padding: 0.5em 1em;
   cursor: pointer;
   transition: all 0.2s;
-  ${({ theme, type }) =>
-    theme &&
+  ${({ myTheme, type }) =>
+    myTheme &&
     `
-    background-color: ${theme.buttons[type].backgroundColor};
-    color: ${theme.buttons[type].text};
-    border: ${theme.buttons[type].border.default};
+    background-color: ${myTheme.buttons[type].backgroundColor};
+    color: ${myTheme.buttons[type].text};
+    border: ${myTheme.buttons[type].border.default};
     &:hover {
-      border: ${theme.buttons[type].border.hover};
-      box-shadow: 0px 0px 1px 1px ${theme.buttons[type].border.shadowColor};
+      border: ${myTheme.buttons[type].border.hover};
+      box-shadow: 0px 0px 1px 1px ${myTheme.buttons[type].border.shadowColor};
     }
   `}
 `;

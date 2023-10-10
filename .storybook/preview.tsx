@@ -1,13 +1,11 @@
 // .storybook/preview.ts
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { ThemeProvider } from "styled-components";
-
-import { theme } from "../src/Theme";
+import { ThemeProvider } from "../src/HOC/ThemeProvider";
 
 const withThemeProvider = (Story, context) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <Story />
     </ThemeProvider>
   );
