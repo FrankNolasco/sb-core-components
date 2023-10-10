@@ -4,7 +4,6 @@ export { Flex, Row, Column } from "./components/skeleton/Flex";
 export { Grid, GridChild } from "./components/skeleton/Grid";
 export { Button } from "./components/atoms/Button";
 export { InputText } from "./components/atoms/InputText";
-export { Dropdown } from "./components/atoms/Dropdown";
 export { RadioGroup, Radio } from "./components/atoms/Radio";
 export {
   Typography,
